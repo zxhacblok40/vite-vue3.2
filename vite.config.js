@@ -73,7 +73,10 @@ export default defineConfig({
   resolve: {
     // 文件系统路径别名
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
+      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
+      '@assets': fileURLToPath(new URL('./src/assets', import.meta.url))
     },
     //导入时想要省略的扩展名列表
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']

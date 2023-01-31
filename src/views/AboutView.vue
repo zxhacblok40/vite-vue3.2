@@ -10,6 +10,5 @@
   display: flex;
   align-items: center;
   color: @color;
-  background-color: @bgColor;
 }
 </style>

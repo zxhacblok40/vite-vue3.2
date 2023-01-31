@@ -8,9 +8,13 @@ onMounted(() => {
 })
 </script>
 
-<style>
-html,
+<style lang="less">
+html {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
+  height: 100%;
+  background-color: @bgColor;
 }
 </style>

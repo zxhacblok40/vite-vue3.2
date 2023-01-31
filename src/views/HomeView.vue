@@ -20,7 +20,6 @@ setTimeout(() => {
 .home {
   width: 100%;
   height: 375px;
-  background-color: @bgColor;
   border-radius: @round8;
   color: @color;
 }
