@@ -9,11 +9,17 @@
 
 <script setup>
 import { setTheme } from '@/theme/theme.js'
+import { useDemoStore } from '@/stores/demo.js'
+import { useCounterStore } from '@/stores/counter.js'
 const home = ref('home')
+const store = useDemoStore()
+const store2 = useCounterStore()
 const loading = ref(true)
 setTimeout(() => {
   loading.value = false
 }, 3000)
+console.log('store', store)
+console.log('store2', store2)
 </script>
 
 <style lang="less" scoped>
