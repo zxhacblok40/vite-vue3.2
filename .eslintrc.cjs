@@ -51,7 +51,7 @@ module.exports = {
     'func-call-spacing': 2, // 要求或禁止在函数标识符和其调用之间有空格
     'jsx-quotes': 2, // 强制在 JSX 属性中一致地使用双引号或单引号
     'key-spacing': 2, // 强制在对象字面量的属性中键和值之间使用一致的间距
-    indent: [2, 2], // 缩进2个空格
+    indent: [2, 2, { SwitchCase: 1 }], // 缩进2个空格
     quotes: [2, 'single'], // 使用单引号
     'no-mixed-spaces-and-tabs': [2], // 禁止空格和 tab 的混合缩进
     'no-extra-semi': [2], // 禁止不必要的分号
