@@ -17,9 +17,11 @@ export default defineConfig({
     vueJsx(),
     removeConsole(),
     AutoImport({
+      // 自动引入的api从这里找
       imports: ['vue', 'vue-router', 'pinia'],
+      // 根据项目情况配置eslintrc，默认是不开启的
       eslintrc: {
-        enabled: true, // Default `false`
+        enabled: false, // Default `false`
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
         globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       }
@@ -66,10 +68,10 @@ export default defineConfig({
       }
     })
   ],
-  mode: 'development', // 模式
+  // mode: 'development', // 模式
   base: './', // 开发或生产环境服务的公共基础路径
   publicDir: false, //静态资源服务的文件夹
-  cacheDir: 'node_modules/.vite', //存储缓存文件的目录
+  // cacheDir: 'node_modules/.vite', //存储缓存文件的目录
   resolve: {
     // 文件系统路径别名
     alias: {
@@ -126,9 +128,9 @@ export default defineConfig({
     proxy: {
       // 带选项写法：http://localhost:5173/api/bar -> http://jsonplaceholder.typicode.com/bar
       '/api': {
-        target: 'http://jsonplaceholder.typicode.com',
+        target: 'http://192.168.2.199:9090',
         changeOrigin: true,
-        rewrite: () => path.replace(/^\/api/, '')
+        rewrite: (url) => url.replace(/^\/api/, '')
       },
       // 代理 websockets 或 socket.io 写法：ws://localhost:5173/socket.io -> ws://localhost:5174/socket.io
       '/socket.io': {

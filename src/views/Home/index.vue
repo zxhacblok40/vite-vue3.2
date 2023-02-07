@@ -8,6 +8,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { setTheme } from '@/theme/theme.js'
 import { useDemoStore } from '@/stores/demo.js'
 import { useCounterStore } from '@/stores/counter.js'

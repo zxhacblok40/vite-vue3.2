@@ -19,6 +19,7 @@ instance.interceptors.request.use(config => {
 // 响应后
 instance.interceptors.response.use(response => {
   console.log(response)
+  return response
 }, err => {
   // 响应错误
   console.log(err)
