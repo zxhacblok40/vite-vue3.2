@@ -3,6 +3,8 @@
 </template>
 <script setup>
 import { setTheme } from '@/theme/theme.js'
+import { downloadByPath } from '@utils/index.js'
+console.log(downloadByPath);
 onMounted(() => {
   setTheme(localStorage.getItem('theme') || 'light')
 })
