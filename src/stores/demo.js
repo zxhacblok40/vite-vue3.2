@@ -1,7 +1,4 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
-
-export const useDemoStore = defineStore('demo', () => {
+export const useDemoStore = defineStore('useDemoStore', () => {
   const demo = ref(0)
   const doubleDemo = computed(() => demo.value * 2)
   function increment() {

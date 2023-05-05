@@ -5,6 +5,7 @@
 import { setTheme } from '@/theme/theme.js'
 import { downloadByPath } from '@utils/index.js'
 console.log(downloadByPath);
+console.log(import.meta.env);
 onMounted(() => {
   setTheme(localStorage.getItem('theme') || 'light')
 })
