@@ -3,11 +3,10 @@
 </template>
 <script setup>
 import { setTheme } from '@/theme/theme.js'
-import { downloadByPath } from '@utils/index.js'
-console.log(downloadByPath);
-console.log(import.meta.env);
+import { curTime } from '@/utils/index.js';
 onMounted(() => {
   setTheme(localStorage.getItem('theme') || 'light')
+  console.warn(`${import.meta.env.MODE !== 'production' ? '当前启动时间' : '当前打包时间'}`, curTime());
 })
 </script>
 
